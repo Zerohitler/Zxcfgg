@@ -30,7 +30,7 @@ const oklchToHex = (str) => {
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://fuwari.vercel.app/",
+  site: "https://blog.zero-id.online/",
   base: "/",
   trailingSlash: "always",
   integrations: [
@@ -112,7 +112,7 @@ export default defineConfig({
       rollupOptions: {
         onwarn(warning, warn) {
           // temporarily suppress this warning
-          if (warning.message.includes("is dynamically imported by") && warning.message.includes("but also statically imported by")) {
+          if (warning.message.includes("is dynamically imported by ZERO ID ") && warning.message.includes("but also statically imported by ZERO ID")) {
             return;
           }
           warn(warning);
